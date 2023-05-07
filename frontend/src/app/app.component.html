@@ -1,0 +1,8 @@
+<div>
+  <a [routerLink]="['/home']">Home</a>
+  <a *ngIf="!isUserLoggedIn" [routerLink]="['/login']">Login</a>
+  <a *ngIf="!isUserLoggedIn" [routerLink]="['/register']">Register</a>
+  <Button *ngIf="isUserLoggedIn" (click)="logOut()">Logout</Button>
+</div>
+
+<router-outlet></router-outlet>
